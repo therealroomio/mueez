@@ -225,20 +225,20 @@ const Home = () => {
           <HeroGradient />
           <div className="header-container">
             <div className="header h-1">
-              <h1>Made to Move,</h1>
-              <h1>Built to Inspire</h1>
+              <h1>We Create Moments</h1>
+              <h1>That Connect</h1>
             </div>
             <div className="header h-2">
-              <h1>Ideas Born,</h1>
-              <h1>Boundaries Broken</h1>
+              <h1>Authentically</h1>
+              <h1>Engaging Brands</h1>
             </div>
             <div className="header h-3">
-              <h1>Nơi sáng tạo,</h1>
-              <h1>Không giới hạn</h1>
+              <h1>Deep Cultural</h1>
+              <h1>Insights Drive Us</h1>
             </div>
             <div className="header h-4">
-              <h1>Where Vision Meets,</h1>
-              <h1>Limitless Design</h1>
+              <h1>There&apos;s Always</h1>
+              <h1>A Story To Tell</h1>
             </div>
           </div>
         </section>
@@ -299,17 +299,15 @@ const Home = () => {
             <img src="/cta/cta-bg.png" alt="" />
           </div>
           <div className="cta-title">
-            <p>Trusted by visionaries</p>
+            <p>Trusted by innovators</p>
           </div>
           <div className="cta-header">
             <h2>
-              Apple, Netflix, Gucci, Tesla, Uniqlo, Sephora, Google, Moët &
-              Chandon, Spotify, BMW, Montblanc, Panasonic, Nespresso, L’Oréal,
-              Samsung
+              Building the next generation of digital experiences and creative solutions
             </h2>
           </div>
           <div className="cta-btn">
-            <button>Discover more at origin.co</button>
+            <button>Connect with us at 4thtale.com</button>
           </div>
         </section>
 
@@ -317,13 +315,13 @@ const Home = () => {
           <div className="container">
             <div className="manifesto-header">
               <HiArrowRight size={13} />
-              <p>Manifesto</p>
+              <p>Our Approach</p>
             </div>
             <div className="manifesto-title">
               <h1>
-                We challenge norms, embrace change, pioneer progress. We are
-                innovators merging art and technology to craft experiences that
-                surprise, delight, and evolve.
+                We create moments that authentically connect brands to their most valued 
+                audiences. Deep cultural insights drive breakthrough concepts and design 
+                that establish long-lasting relationships.
               </h1>
             </div>
           </div>
@@ -334,7 +332,7 @@ const Home = () => {
             <div className="process">
               <div className="process-title">
                 <RiArrowRightDownLine />
-                <p>Integrate</p>
+                <p>Strategy & Design</p>
               </div>
               <div className="process-info">
                 <div className="process-icon">
@@ -344,10 +342,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Rooted in creativity, Origin bridges cultures to craft
-                    designs that transcend time and place. We thrive at the
-                    intersection of ideas, uniting diverse perspectives into a
-                    seamless vision.
+                    Deep cultural insight drives break-through concepts and design 
+                    that establish long-lasting relationships between brands and consumers.
                   </p>
                 </div>
               </div>
@@ -356,7 +352,7 @@ const Home = () => {
             <div className="process">
               <div className="process-title">
                 <RiArrowRightDownLine />
-                <p>Collaborate</p>
+                <p>Influencer & Culture</p>
               </div>
               <div className="process-info">
                 <div className="process-icon">
@@ -366,9 +362,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Creativity is a collective process. At Origin, collaboration
-                    is our foundation—merging ideas, talents, and visions to
-                    create experiences that resonate universally.
+                    Sourcing and activating the perfect talent for authentic storytelling. 
+                    Who&apos;s the main character in your story?
                   </p>
                 </div>
               </div>
@@ -377,7 +372,7 @@ const Home = () => {
             <div className="process">
               <div className="process-title">
                 <RiArrowRightDownLine />
-                <p>Challenge</p>
+                <p>Content & Production</p>
               </div>
               <div className="process-info">
                 <div className="process-icon">
@@ -387,9 +382,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    We challenge conventions and redefine possibilities. At
-                    Origin, we dare to push boundaries, delivering solutions
-                    that are as bold as they are impactful.
+                    Original content development and full production capabilities – 
+                    pre, intra, and post. You dream it, we breathe it into reality.
                   </p>
                 </div>
               </div>
@@ -399,7 +393,7 @@ const Home = () => {
 
         <div className="marquee">
           <div className="marquee-text">
-            <h1>Explore the essence of Origin Studio</h1>
+            <h1>Creating authentic brand experiences with 4th Tale Inc</h1>
           </div>
         </div>
 
@@ -412,21 +406,20 @@ const Home = () => {
             <div className="about-col">
               <div className="about-header">
                 <HiArrowRight size={13} />
-                <p>Origin Spirit</p>
+                <p>Our Vision</p>
               </div>
               <div className="about-copy">
                 <p>
-                  The Origin Spirit embodies creativity without boundaries.
-                  Whether you’re a lifelong dreamer, a new explorer, or someone
-                  returning to familiar grounds, Origin welcomes those who dare
-                  to imagine. Being part of Origin means embracing inspiration,
-                  collaboration, and limitless potential.
+                  At 4th Tale Inc, we believe in the power of authentic storytelling 
+                  and meaningful connections. Our approach combines deep cultural insights 
+                  with innovative design thinking to create impactful brand experiences 
+                  that resonate with audiences and drive real results.
                 </p>
               </div>
             </div>
             <div className="about-col">
               <div className="cta-btn">
-                <button>Discover more at origin.co</button>
+                <button>Connect with us at 4thtale.com</button>
               </div>
             </div>
           </div>
@@ -502,14 +495,14 @@ const Home = () => {
 
             <div className="team-intro">
               <h1>
-                From corners of globe, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; we are
-                united by &nbsp;&nbsp;&nbsp; creativity
+                Passionate creators, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; driven by
+                &nbsp;&nbsp;&nbsp; innovation
               </h1>
             </div>
 
             <div className="team-member tm-1">
               <div className="team-member-position">
-                <p>Lead Developer</p>
+                <p>Founder & Creative Director</p>
               </div>
               <div className="team-member-profile">
                 <div className="team-member-img">
@@ -518,8 +511,8 @@ const Home = () => {
                 <div className="team-member-info">
                   <div className="team-member-name">
                     <p>
-                      Alex <br />
-                      Johnson
+                      Mueez <br />
+                      Khurshid
                     </p>
                   </div>
                   <div className="team-member-details">
@@ -528,9 +521,9 @@ const Home = () => {
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Alex is a skilled developer with expertise in modern web
-                        technologies and a passion for creating seamless user
-                        experiences.
+                        Leading with vision and creativity, Mueez brings over a decade of 
+                        experience in brand strategy and creative direction, crafting 
+                        compelling narratives that connect and inspire.
                       </p>
                     </div>
                   </div>
@@ -538,7 +531,7 @@ const Home = () => {
               </div>
               <div className="team-member-index">
                 <p>(01)</p>
-                <h1>Alex Johnson</h1>
+                <h1>Mueez Khurshid</h1>
               </div>
             </div>
 
@@ -625,61 +618,24 @@ const Home = () => {
             </div>
 
             <div className="footer-email">
-              <p>We’d love to hear from you</p>
-              <h2>hello@origin.co</h2>
+              <p>Let&apos;s create something amazing together</p>
+              <h2>mueez@4thtale.com</h2>
             </div>
 
             <div className="footer-content">
               <div className="footer-col">
                 <div className="footer-col-header">
-                  <p>Our Spaces</p>
+                  <p>Our Office</p>
                 </div>
 
                 <div className="footer-col-content">
                   <div className="footer-sub-col">
                     <div className="location">
-                      <h3>New York</h3>
-                      <p>123 Creative Hub,</p>
-                      <p>5th Avenue, Suite 101</p>
-                      <p>New York, NY, 10010</p>
-                      <p>USA</p>
-
-                      <p>
-                        <HiArrowRight /> View on map
-                      </p>
-                    </div>
-
-                    <div className="location">
-                      <h3>Tokyo</h3>
-                      <p>Innovators Tower,</p>
-                      <p>Shibuya City, 8th Floor</p>
-                      <p>Tokyo, 150-0001</p>
-                      <p>Japan</p>
-
-                      <p>
-                        <HiArrowRight /> View on map
-                      </p>
-                    </div>
-                  </div>
-                  <div className="footer-sub-col">
-                    <div className="location">
-                      <h3>London</h3>
-                      <p>Design District,</p>
-                      <p>Greenwich Peninsula</p>
-                      <p>London, SE10 0ER</p>
-                      <p>UK</p>
-
-                      <p>
-                        <HiArrowRight /> View on map
-                      </p>
-                    </div>
-
-                    <div className="location">
-                      <h3>Singapore</h3>
-                      <p>Marina Bay Financial Center,</p>
-                      <p>10 Marina Blvd, Tower 2</p>
-                      <p>Singapore, 018983</p>
-                      <p>Singapore</p>
+                      <h3>Headquarters</h3>
+                      <p>4th Tale Inc</p>
+                      <p>Innovation Center</p>
+                      <p>Toronto, ON</p>
+                      <p>Canada</p>
 
                       <p>
                         <HiArrowRight /> View on map
@@ -690,14 +646,15 @@ const Home = () => {
               </div>
               <div className="footer-col">
                 <div className="footer-col-header">
-                  <p>Follow Us</p>
+                  <p>Connect With Us</p>
                 </div>
                 <div className="footer-sub-col">
-                  <p>Instagram</p>
                   <p>LinkedIn</p>
                   <p>Twitter</p>
-                  <p>Behance</p>
-                  <p>Dribbble</p>
+                  <p>
+                    <a href="https://www.instagram.com/4thtale/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </p>
+                  <p>GitHub</p>
                 </div>
               </div>
             </div>

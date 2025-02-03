@@ -32,7 +32,7 @@ const Work = () => {
 
         <section className="sp-title">
           <div className="container">
-            <h1>Shadow Beacon by Lightforms</h1>
+            <h1>Vertical Horizon Residences</h1>
           </div>
         </section>
 
@@ -43,17 +43,17 @@ const Work = () => {
         <section className="sp-details">
           <div className="container">
             <div className="sp-details-col">
-              <p className="sp-details-name">Shadow Beacon</p>
+              <p className="sp-details-name">Vertical Horizon</p>
 
               <div className="sp-tags">
-                <p>Motion Capture</p>
-                <p>Creative Direction</p>
-                <p>3D</p>
-                <p>Post Production</p>
+                <p>Architectural Visualization</p>
+                <p>Interior Design</p>
+                <p>3D Rendering</p>
+                <p>Technical Documentation</p>
               </div>
 
               <div className="sp-date">
-                <p>February 2021</p>
+                <p>March 2024</p>
               </div>
 
               <div className="sp-link">
@@ -70,15 +70,12 @@ const Work = () => {
             <div className="sp-details-col">
               <p>Challenge</p>
               <p>
-                Shadow Beacon is a tribute to the interplay between light and
-                form. During a time when the world seemed paused, we set out to
-                create a piece that celebrates movement, space, and emotion.
-                Combining motion capture with imaginative 3D landscapes, the
-                project envisions a dreamlike realm where light becomes a
-                storyteller. Through thoughtful creative direction and intricate
-                post-production, we crafted a narrative that feels both intimate
-                and expansive—a beacon for those searching for connection and
-                inspiration in uncertain times.
+                Vertical Horizon Residences represents a bold reimagining of urban living spaces. 
+                In an era where metropolitan density challenges traditional architectural paradigms, 
+                we set out to create a residential complex that harmonizes vertical expansion with 
+                horizontal connectivity. Through sophisticated 3D visualization and meticulous 
+                technical planning, the project envisions a living space that transcends conventional 
+                boundaries—creating a sanctuary where architectural innovation meets human-centric design.
               </p>
             </div>
           </div>
@@ -96,13 +93,12 @@ const Work = () => {
 
             <div className="sp-info-desc">
               <p>
-                Shadow Beacon explores the idea of finding clarity in moments of
-                obscurity. Inspired by the duality of light and shadow, we
-                imagined a character who navigates a surreal world, guided by
-                beams of light that reveal hidden paths and truths. This
-                character, free from physical constraints, embodies the
-                liberation from everyday burdens, moving fluidly through spaces
-                that are both familiar and otherworldly.
+                Vertical Horizon explores the delicate balance between architectural ambition and 
+                environmental consciousness. Drawing inspiration from the vertical gardens of Singapore 
+                and the cascading terraces of ancient civilizations, we envisioned a structure that 
+                grows skyward while maintaining intimate connections with nature and community. This 
+                design philosophy manifests in a series of interconnected spaces that challenge the 
+                traditional notion of high-rise living.
               </p>
             </div>
           </div>
@@ -122,14 +118,13 @@ const Work = () => {
 
             <div className="sp-info-desc">
               <p>
-                To bring Shadow Beacon to life, we focused on creating a
-                seamless blend of reality and surrealism. Escapism became our
-                guiding principle, leading us to juxtapose real-life moments
-                with ethereal 3D landscapes. Shot on the quiet streets of
-                Saigon, our Director of Photography, Ray Lavers, captured
-                fleeting glimpses of reality in just two hours during
-                quarantine. These grounded visuals set the stage for the
-                dreamlike sequences that followed.
+                Our approach to Vertical Horizon centered on creating a seamless integration of 
+                built and natural environments. Using advanced parametric design tools and 
+                environmental simulation software, we developed a facade system that responds 
+                to solar patterns and wind conditions. The visualization process involved detailed 
+                material studies and lighting scenarios, captured through high-fidelity 3D renders 
+                that showcase the interplay between light, shadow, and architectural form throughout 
+                the day.
               </p>
             </div>
           </div>
@@ -151,7 +146,7 @@ const Work = () => {
                   <p>Project</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Shadow Beacon</p>
+                  <p>Vertical Horizon Residences</p>
                 </div>
               </div>
               <div className="credits-col">
@@ -160,8 +155,8 @@ const Work = () => {
                 </div>
                 <div className="credits-copy">
                   <p>
-                    Motion Capture, Creative Direction, 3D Design, Atmospheric
-                    Post-Production
+                    Architectural Visualization, Interior Design, 3D Rendering,
+                    Technical Documentation
                   </p>
                 </div>
               </div>
@@ -180,7 +175,7 @@ const Work = () => {
                   <p>Directors</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Lila Morrin (Lightforms), Kai Rivers (Lightforms)</p>
+                  <p>Sarah Chen (Lead Architect), Marcus Wong (Design Director)</p>
                 </div>
               </div>
             </div>
@@ -189,10 +184,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Creative Producer</p>
+                  <p>Project Lead</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Eli Dawson</p>
+                  <p>David Park</p>
                 </div>
               </div>
             </div>
@@ -201,10 +196,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Art Direction & Animation</p>
+                  <p>Architectural Design & Visualization</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Lila Morrin (Lightforms)</p>
+                  <p>Sarah Chen</p>
                 </div>
               </div>
             </div>
@@ -213,10 +208,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Editing & Compositing</p>
+                  <p>Technical Documentation & BIM</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Kai Rivers (Lightforms)</p>
+                  <p>Marcus Wong</p>
                 </div>
               </div>
             </div>
@@ -225,10 +220,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Cinematography & Color Grading</p>
+                  <p>Environmental Analysis</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Rhea Clarke</p>
+                  <p>Elena Martinez</p>
                 </div>
               </div>
             </div>
@@ -237,10 +232,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Choreography</p>
+                  <p>Structural Engineering</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Juno Evers</p>
+                  <p>James Foster</p>
                 </div>
               </div>
             </div>
@@ -249,10 +244,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Sound Design</p>
+                  <p>Landscape Architecture</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Echo Chamber Studios</p>
+                  <p>Terra Form Studios</p>
                 </div>
               </div>
             </div>
@@ -261,10 +256,10 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Label</p>
+                  <p>Sustainability Consultants</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Lightforms Collective</p>
+                  <p>EcoSync Solutions</p>
                 </div>
               </div>
             </div>
@@ -273,10 +268,22 @@ const Work = () => {
               <div className="credits-col"></div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Acknowledgments</p>
+                  <p>Client</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Mira Solis, Adrian Wren, & Camille Trest</p>
+                  <p>Horizon Development Group</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="credits-row">
+              <div className="credits-col"></div>
+              <div className="credits-col">
+                <div className="credits-header">
+                  <p>Special Thanks</p>
+                </div>
+                <div className="credits-copy">
+                  <p>Urban Planning Department, City Sustainability Office</p>
                 </div>
               </div>
             </div>
@@ -296,7 +303,7 @@ const Work = () => {
                 </h1>
               </div>
               <div className="next-project-title">
-                <h1>The Machina Chronicles by Narratives Studio</h1>
+                <h1>Urban Oasis Complex by MetroForm Architects</h1>
               </div>
             </div>
           </div>

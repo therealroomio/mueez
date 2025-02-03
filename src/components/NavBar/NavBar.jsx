@@ -124,17 +124,12 @@ const NavBar = () => {
       <div className="navbar-container">
         <div className="logo">
           <a href="#hero">
-            <h3>origin</h3>
-            <span>studio</span>
+            <h3>4th Tale</h3>
+            <span>Inc</span>
           </a>
         </div>
 
         <div className="nav-items">
-          <div className="langs">
-            <p className="current-lang">EN</p>
-            <p>VN</p>
-            <p>ZH</p>
-          </div>
 
           <div className="nav-links">
             <a href="#work">

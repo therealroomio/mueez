@@ -1,0 +1,195 @@
+---
+description: 
+globs: 
+---
+# 4th Tale Design System
+Version 1.0.0
+
+## @tokens
+
+### Typography
+@font-family: Roobert
+@font-weights: {
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  heavy: 800
+}
+
+### Colors
+@colors: {
+  primary: {
+    dark: #1A1A1A,
+    light: #F5F5F5
+  },
+  accent: {
+    wood: #8C7355,
+    concrete: #B7B7A4,
+    sage: #6B705C
+  },
+  text: {
+    primary: #333333,
+    secondary: #666666
+  }
+}
+
+### Spacing
+@spacing: {
+  section: {
+    min: 4em,
+    max: 10em
+  },
+  element: {
+    min: 2em,
+    max: 4em
+  },
+  text: {
+    min: 0.5em,
+    max: 1.5em
+  }
+}
+
+### Breakpoints
+@breakpoints: {
+  mobile: 900px,
+  tablet: 1200px,
+  desktop: 1201px
+}
+
+## @rules
+
+### Layout
+@container-width: 75%
+@max-width: 1920px
+@min-width: 320px
+
+### Images
+@project-thumb: {
+  aspect-ratio: 4/5,
+  min-width: 1920px,
+  format: [.jpg, .webp]
+}
+
+@hero-image: {
+  aspect-ratio: 16/9,
+  min-width: 1920px,
+  format: [.jpg, .webp]
+}
+
+### Animations
+@transitions: {
+  default: 0.5s ease,
+  page: 1s ease,
+  hover: 0.3s ease,
+  easing: power2.out
+}
+
+### 3D Renders
+@render-specs: {
+  min-resolution: 4K,
+  format: [.jpg, .png],
+  views-per-project: 5,
+  required-shots: [
+    "exterior-front",
+    "exterior-rear",
+    "interior-main",
+    "detail-architectural",
+    "context-environmental"
+  ]
+}
+
+## @components
+
+### Navigation
+@nav-structure: {
+  logo: "4th Tale",
+  primary-links: [
+    "Projects",
+    "Services",
+    "About",
+    "Contact"
+  ],
+  mobile-menu: {
+    type: "hamburger",
+    animation: "slide-right"
+  }
+}
+
+### Project Cards
+@card-structure: {
+  elements: [
+    "image",
+    "title",
+    "category",
+    "year"
+  ],
+  hover-state: {
+    scale: 1.05,
+    duration: 0.3s
+  }
+}
+
+### Buttons
+@button-styles: {
+  primary: {
+    background: transparent,
+    text-color: @colors.primary.dark,
+    hover: {
+      background: @colors.primary.dark,
+      text-color: @colors.primary.light
+    }
+  },
+  secondary: {
+    border: 1px solid @colors.primary.dark,
+    hover: {
+      background: @colors.primary.dark
+    }
+  }
+}
+
+## @content
+
+### Project Structure
+@project-template: {
+  required-sections: [
+    "hero-image",
+    "project-title",
+    "project-details": {
+      client: string,
+      location: string,
+      year: number,
+      category: ["Residential", "Commercial", "Interior"],
+      visualization: ["Rendering", "Animation", "VR"]
+    },
+    "project-description": {
+      challenge: string,
+      solution: string,
+      outcome: string
+    },
+    "gallery": {
+      min-images: 5,
+      max-images: 15
+    },
+    "technical-specs": {
+      software: array,
+      render-engine: string,
+      post-processing: array
+    }
+  ]
+}
+
+### SEO Requirements
+@seo-rules: {
+  title-format: "4th Tale - {Project Name} | {Category}",
+  meta-description: {
+    max-length: 160,
+    required-elements: [
+      "project-type",
+      "location",
+      "key-feature"
+    ]
+  },
+  image-alt-text: required
+}

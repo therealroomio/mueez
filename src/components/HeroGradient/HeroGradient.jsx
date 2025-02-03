@@ -11,7 +11,6 @@ import {
 const HeroGradient = () => {
   const canvasRef = useRef(null);
   const threeCanvasRef = useRef(null);
-  const rafRef = useRef(null);
   const startTimeRef = useRef(Date.now());
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
@@ -21,7 +20,8 @@ const HeroGradient = () => {
   const contextRef = useRef(null);
   const mousePosition = useRef({ x: 0, y: 0 });
   const targetPosition = useRef({ x: 2, y: 2, z: 2 });
-  const [brightnessValue, setBrightnessValue] = useState(1.25);
+  const isVisibleRef = useRef(true);
+  const [brightnessValue] = useState(1.25);
 
   const hexToRgb = (hex) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -44,10 +44,10 @@ const HeroGradient = () => {
       aw: 7.5,
       bx: 1,
       by: -1,
-      color1: "#585843",
-      color2: "#717543",
-      color3: "#d2b172",
-      color4: "#2b3928",
+      color1: "#1a1a1a",
+      color2: "#404040",
+      color3: "#808080",
+      color4: "#0a0a0a",
     }),
     []
   );
@@ -67,6 +67,23 @@ const HeroGradient = () => {
     }),
     [brightnessValue]
   );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisibleRef.current = entry.isIntersecting;
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     let animationFrameId;
@@ -90,17 +107,17 @@ const HeroGradient = () => {
     rendererRef.current = renderer;
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    const geometry = new THREE.SphereGeometry(2.75, 2000, 2000);
+    const geometry = new THREE.SphereGeometry(2.75, 32, 32);
     const material = new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
         timeSpeed: { value: 0.05 },
         scale: { value: 0.5 },
         brightness: { value: sphereControls.brightness },
-        color1: { value: new THREE.Color(0x585843) },
-        color2: { value: new THREE.Color(0x717543) },
-        color3: { value: new THREE.Color(0xd2b172) },
-        color4: { value: new THREE.Color(0x2b3928) },
+        color1: { value: new THREE.Color(0x1a1a1a) },
+        color2: { value: new THREE.Color(0x404040) },
+        color3: { value: new THREE.Color(0x808080) },
+        color4: { value: new THREE.Color(0x0a0a0a) },
         ax: { value: 5 },
         ay: { value: 2.5 },
         az: { value: 5 },
@@ -136,8 +153,24 @@ const HeroGradient = () => {
       };
     };
 
-    const animateSphere = () => {
-      const currentTime = Date.now() - startTimeRef.current;
+    let lastFrame = performance.now();
+    const targetFPS = 60;
+    const frameInterval = 1000 / targetFPS;
+
+    const animateSphere = (currentTime) => {
+      if (!isVisibleRef.current) {
+        animationFrameId = requestAnimationFrame(animateSphere);
+        return;
+      }
+
+      const deltaTime = currentTime - lastFrame;
+      if (deltaTime < frameInterval) {
+        animationFrameId = requestAnimationFrame(animateSphere);
+        return;
+      }
+
+      lastFrame = currentTime - (deltaTime % frameInterval);
+      const time = Date.now() - startTimeRef.current;
 
       if (sphere) {
         sphere.position.x +=
@@ -149,7 +182,7 @@ const HeroGradient = () => {
       }
 
       if (sphere.material) {
-        sphere.material.uniforms.time.value = currentTime;
+        sphere.material.uniforms.time.value = time;
         sphere.material.uniforms.timeSpeed.value = sphereControls.timeSpeed;
         sphere.material.uniforms.brightness.value = sphereControls.brightness;
 
@@ -183,7 +216,7 @@ const HeroGradient = () => {
 
     window.addEventListener("resize", handleResize);
     window.addEventListener("mousemove", handleMouseMove);
-    animateSphere();
+    animateSphere(performance.now());
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -302,7 +335,24 @@ const HeroGradient = () => {
     window.addEventListener("resize", resize);
     resize();
 
-    const render = () => {
+    let lastBackgroundFrame = performance.now();
+    const targetFPS = 60;
+    const frameInterval = 1000 / targetFPS;
+
+    const render = (currentTime) => {
+      if (!isVisibleRef.current) {
+        rafId = requestAnimationFrame(render);
+        return;
+      }
+
+      const deltaTime = currentTime - lastBackgroundFrame;
+      if (deltaTime < frameInterval) {
+        rafId = requestAnimationFrame(render);
+        return;
+      }
+
+      lastBackgroundFrame = currentTime - (deltaTime % frameInterval);
+
       if (gl && program) {
         const currentTime = Date.now() - startTimeRef.current;
         gl.uniform1f(uniforms.time, currentTime);
@@ -312,7 +362,7 @@ const HeroGradient = () => {
       }
     };
 
-    render();
+    render(performance.now());
 
     return () => {
       window.removeEventListener("resize", resize);
