@@ -225,20 +225,20 @@ const Home = () => {
           <HeroGradient />
           <div className="header-container">
             <div className="header h-1">
-              <h1>We Create Moments</h1>
-              <h1>That Connect</h1>
+              <h1>We Shape Skylines...</h1>
+              <h1>That Inspire</h1>
             </div>
             <div className="header h-2">
-              <h1>Authentically</h1>
-              <h1>Engaging Brands</h1>
+              <h1>Transforming Vision...</h1>
+              <h1>Into Reality</h1>
             </div>
             <div className="header h-3">
-              <h1>Deep Cultural</h1>
-              <h1>Insights Drive Us</h1>
+              <h1>Global Icons...</h1>
+              <h1>Future Legacy</h1>
             </div>
             <div className="header h-4">
-              <h1>There&apos;s Always</h1>
-              <h1>A Story To Tell</h1>
+              <h1>Engineering Dreams...</h1>
+              <h1>Building Landmarks</h1>
             </div>
           </div>
         </section>
@@ -319,9 +319,10 @@ const Home = () => {
             </div>
             <div className="manifesto-title">
               <h1>
-                We create moments that authentically connect brands to their most valued 
-                audiences. Deep cultural insights drive breakthrough concepts and design 
-                that establish long-lasting relationships.
+                Got a massive architectural dream? That&apos;s our specialty. We use 
+                state-of-the-art 3D design to create extraordinary buildings that 
+                become part of history - from World Cup stadiums to skyline-defining 
+                towers that make people go &quot;wow!&quot;
               </h1>
             </div>
           </div>
@@ -342,8 +343,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Deep cultural insight drives break-through concepts and design 
-                    that establish long-lasting relationships between brands and consumers.
+                    We use cutting-edge 3D design to create buildings that stand the test of time, 
+                    from iconic World Cup stadiums to breathtaking skyscrapers.
                   </p>
                 </div>
               </div>
@@ -362,7 +363,7 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Sourcing and activating the perfect talent for authentic storytelling. 
+                    We source and activate the perfect talent for authentic storytelling. 
                     Who&apos;s the main character in your story?
                   </p>
                 </div>
@@ -382,8 +383,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Original content development and full production capabilities – 
-                    pre, intra, and post. You dream it, we breathe it into reality.
+                    We create original content and produce it from pre to post. 
+                    You dream it, we breathe it into reality.
                   </p>
                 </div>
               </div>
@@ -521,9 +522,8 @@ const Home = () => {
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Leading with vision and creativity, Mueez brings over a decade of 
-                        experience in brand strategy and creative direction, crafting 
-                        compelling narratives that connect and inspire.
+                        thicc cutie <br />
+                        with a 3d butt
                       </p>
                     </div>
                   </div>
@@ -537,7 +537,7 @@ const Home = () => {
 
             <div className="team-member tm-2">
               <div className="team-member-position">
-                <p>UI/UX Designer</p>
+                <p>Hero</p>
               </div>
               <div className="team-member-profile">
                 <div className="team-member-img">
@@ -546,9 +546,8 @@ const Home = () => {
                 <div className="team-member-info">
                   <div className="team-member-name">
                     <p>
-                      Sophia <br />
-                      Martinez
-                    </p>
+                      Roomi <br />
+                      Kh                    </p>
                   </div>
                   <div className="team-member-details">
                     <div className="team-member-toggle">
@@ -556,8 +555,7 @@ const Home = () => {
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Sophia specializes in crafting intuitive and visually
-                        appealing designs that bring digital products to life.
+                        Roomi is a legend among legends, <br/>Acknowledge him. ☝️
                       </p>
                     </div>
                   </div>
@@ -565,10 +563,10 @@ const Home = () => {
               </div>
               <div className="team-member-index">
                 <p>(02)</p>
-                <h1>Sophia Martinez</h1>
+                <h1>Roomi</h1>
               </div>
             </div>
-
+{/*
             <div className="team-member tm-3">
               <div className="team-member-position">
                 <p>Project Manager</p>
@@ -603,6 +601,8 @@ const Home = () => {
                 <h1>Michael Brown</h1>
               </div>
             </div>
+*/}
+
           </div>
         </section>
 

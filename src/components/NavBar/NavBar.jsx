@@ -136,7 +136,7 @@ const NavBar = () => {
               <p>Work</p>
             </a>
             <a href="#manifesto">
-              <p>Manifesto</p>
+              <p>The Motto</p>
             </a>
             <a href="#about">
               <p>Spirit</p>
