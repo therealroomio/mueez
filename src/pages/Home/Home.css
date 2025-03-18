@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* Add base font styling for the entire document */
+body, html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Keep the existing Instrument Serif styling for headings and CTAs */
+.header h1,
+.manifesto-title h2, 
+.team-intro h1,
+.marquee-text h1,
+.footer-title h1,
+.cta-header h2,
+.cta-btn button {
+  font-family: 'Instrument Serif', serif;
+}
+
 section.hero {
   height: 100vh;
   overflow: hidden;
@@ -237,8 +256,9 @@ section.work {
   height: max-content;
 }
 
-.manifesto-title h1 {
-  font-size: 6.5rem;
+.manifesto-title h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 3.5rem;
   line-height: 1.125;
 }
 
@@ -364,6 +384,7 @@ section.work {
 
 .gallery {
   overflow: hidden;
+  height: 150vh;
 }
 
 .gallery-wrapper {
@@ -514,6 +535,7 @@ section.work {
     #647756 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -650,8 +672,8 @@ section.work {
     font-size: 1.75rem;
   }
 
-  .manifesto-title h1 {
-    font-size: 3.5rem;
+  .manifesto-title h2 {
+    font-size: 2.5rem;
   }
 
   .process-info {
@@ -684,11 +706,11 @@ section.work {
   }
 
   .gallery {
-    height: 75vh;
+    height: 125vh;
   }
 
   .gallery-wrapper {
-    transform: translate(-50%, -50%) rotate(30deg) scale(1.125);
+    transform: translate(-50%, -50%) rotate(30deg) scale(1);
   }
 
   .row {

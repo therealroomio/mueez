@@ -1,22 +1,22 @@
-import { useEffect, useState, useRef } from "react";
-import "./Home.css";
-import { Link } from "react-router";
+import { useEffect, useState, useRef } from 'react';
+import './Home.css';
+import { Link } from 'react-router';
 
-import HeroGradient from "../../components/HeroGradient/HeroGradient";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import NavBar from "../../components/NavBar/NavBar";
-import Cursor from "../../components/Cursor/Cursor";
-import Transition from "../../components/Transition/Transition";
+// import HeroGradient from '../../components/HeroGradient/HeroGradient';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+import NavBar from '../../components/NavBar/NavBar';
+import Cursor from '../../components/Cursor/Cursor';
+import Transition from '../../components/Transition/Transition';
 
-import { projects } from "./projects";
+import { projects } from './projects';
 
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import SplitType from "split-type";
-import ReactLenis from "@studio-freight/react-lenis";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
+import ReactLenis from '@studio-freight/react-lenis';
 
-import { HiArrowRight } from "react-icons/hi";
-import { RiArrowRightDownLine } from "react-icons/ri";
+import { HiArrowRight } from 'react-icons/hi';
+import { RiArrowRightDownLine } from 'react-icons/ri';
 
 const Home = () => {
   const manifestoRef = useRef(null);
@@ -26,7 +26,7 @@ const Home = () => {
     const scrollTimeout = setTimeout(() => {
       window.scrollTo({
         top: 0,
-        behavior: "instant",
+        behavior: 'instant',
       });
     }, 0);
 
@@ -40,75 +40,75 @@ const Home = () => {
 
     checkMobile();
 
-    window.addEventListener("resize", checkMobile);
+    window.addEventListener('resize', checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.create({
-      trigger: ".footer",
-      start: "top 80%",
+      trigger: '.footer',
+      start: 'top 80%',
       onEnter: () => {
-        document.querySelector(".team").classList.add("light");
-        document.querySelector(".footer").classList.add("light");
+        document.querySelector('.team').classList.add('light');
+        document.querySelector('.footer').classList.add('light');
       },
       onLeaveBack: () => {
-        document.querySelector(".team").classList.remove("light");
-        document.querySelector(".footer").classList.remove("light");
+        document.querySelector('.team').classList.remove('light');
+        document.querySelector('.footer').classList.remove('light');
       },
     });
 
     if (!isMobile) {
-      gsap.set(".project", { opacity: 0.35 });
+      gsap.set('.project', { opacity: 0.35 });
     }
 
     if (!isMobile) {
-      const projects = document.querySelectorAll(".project");
+      const projects = document.querySelectorAll('.project');
 
       projects.forEach((project) => {
-        const projectImg = project.querySelector(".project-img img");
+        const projectImg = project.querySelector('.project-img img');
 
-        project.addEventListener("mouseenter", () => {
+        project.addEventListener('mouseenter', () => {
           gsap.to(project, {
             opacity: 1,
             duration: 0.5,
-            ease: "power2.out",
+            ease: 'power2.out',
           });
 
           gsap.to(projectImg, {
             scale: 1.2,
             duration: 0.5,
-            ease: "power2.out",
+            ease: 'power2.out',
           });
         });
 
-        project.addEventListener("mouseleave", () => {
+        project.addEventListener('mouseleave', () => {
           gsap.to(project, {
             opacity: 0.35,
             duration: 0.5,
-            ease: "power2.out",
+            ease: 'power2.out',
           });
 
           gsap.to(projectImg, {
             scale: 1,
             duration: 0.5,
-            ease: "power2.out",
+            ease: 'power2.out',
           });
         });
       });
     }
 
-    const manifestoText = new SplitType(".manifesto-title h1", {
-      types: ["words", "chars"],
-      tagName: "span",
-      wordClass: "word",
-      charClass: "char",
+    const manifestoText = new SplitType('.manifesto-title h2', {
+      types: ['words', 'chars'],
+      tagName: 'span',
+      wordClass: 'word',
+      charClass: 'char',
     });
 
-    const style = document.createElement("style");
+    const style = document.createElement('style');
     style.textContent = `
        .word {
          display: inline-block;
@@ -126,9 +126,9 @@ const Home = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".manifesto",
-        start: "top 35%",
-        end: "bottom 75%",
+        trigger: '.manifesto',
+        start: 'top 35%',
+        end: 'bottom 75%',
         scrub: true,
         markers: false,
       },
@@ -140,22 +140,22 @@ const Home = () => {
         {
           opacity: 1,
           duration: 0.1,
-          ease: "none",
+          ease: 'none',
         },
         index * 0.1
       );
     });
 
-    gsap.to(".marquee-text", {
+    gsap.to('.marquee-text', {
       scrollTrigger: {
-        trigger: ".marquee",
-        start: "top bottom",
-        end: "bottom top",
+        trigger: '.marquee',
+        start: 'top bottom',
+        end: 'bottom top',
         scrub: 1,
         markers: false,
         onUpdate: (self) => {
           const moveAmount = self.progress * -1000;
-          gsap.set(".marquee-text", {
+          gsap.set('.marquee-text', {
             x: moveAmount,
           });
         },
@@ -173,7 +173,7 @@ const Home = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const rows = document.querySelectorAll(".row");
+    const rows = document.querySelectorAll('.row');
     const isMobileView = window.innerWidth <= 900;
 
     const getStartX = (index) => {
@@ -184,7 +184,7 @@ const Home = () => {
     if (rows.length > 0) {
       rows.forEach((row, index) => {
         const existingTrigger = ScrollTrigger.getAll().find(
-          (st) => st.trigger === ".gallery" && st.vars?.targets === row
+          (st) => st.trigger === '.gallery' && st.vars?.targets === row
         );
         if (existingTrigger) {
           existingTrigger.kill();
@@ -196,9 +196,9 @@ const Home = () => {
 
         gsap.to(row, {
           scrollTrigger: {
-            trigger: ".gallery",
-            start: "top bottom",
-            end: "bottom top",
+            trigger: '.gallery',
+            start: 'top bottom',
+            end: 'bottom top',
             scrub: isMobileView ? 0.5 : 1,
             onUpdate: (self) => {
               const moveAmount = startX * (1 - self.progress);
@@ -221,7 +221,111 @@ const Home = () => {
       <div className="home">
         <Cursor />
         <NavBar />
-        <section className="hero" id="hero">
+        <section className="gallery">
+          <div className="gallery-wrapper">
+            <div className="row">
+              <div className="img">
+                <img src="/marquee/marquee00001.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00002.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00003.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00004.png" alt="" />
+              </div>
+            </div>
+            <div className="row">
+              <div className="img">
+                <img src="/marquee/marquee00005.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00006.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00007.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00008.png" alt="" />
+              </div>
+            </div>
+            <div className="row">
+              <div className="img">
+                <img src="/marquee/marquee00009.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00010.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00011.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00012.png" alt="" />
+              </div>
+            </div>
+            <div className="row">
+              <div className="img">
+                <img src="/marquee/marquee00013.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00014.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00015.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00016.png" alt="" />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="img">
+                <img src="/marquee/marquee00017.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00018.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00019.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00020.png" alt="" />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="img">
+                <img src="/marquee/marquee00021.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00022.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00023.png" alt="" />
+              </div>
+              <div className="img">
+                <img src="/marquee/marquee00024.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="cta">
+          <div className="cta-title">
+            <p>Trusted by Roomi</p>
+          </div>
+          <div className="cta-header">
+            <h2>
+              We create high quality renders that bring architecture, products, and stories to life
+              with stunning detail and artistic vision.
+            </h2>
+          </div>
+          <div className="cta-btn">
+            <button>Connect with us at 4thtale.com</button>
+          </div>
+        </section>
+        {/* <section className="hero" id="hero">
           <HeroGradient />
           <div className="header-container">
             <div className="header h-1">
@@ -241,7 +345,7 @@ const Home = () => {
               <h1>Building Landmarks</h1>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="work" id="work">
           <div className="container">
@@ -294,23 +398,6 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="cta">
-          <div className="cta-bg-img">
-            <img src="/cta/cta-bg.png" alt="" />
-          </div>
-          <div className="cta-title">
-            <p>Trusted by innovators</p>
-          </div>
-          <div className="cta-header">
-            <h2>
-              Building the next generation of digital experiences and creative solutions
-            </h2>
-          </div>
-          <div className="cta-btn">
-            <button>Connect with us at 4thtale.com</button>
-          </div>
-        </section>
-
         <section className="manifesto" id="manifesto" ref={manifestoRef}>
           <div className="container">
             <div className="manifesto-header">
@@ -318,12 +405,10 @@ const Home = () => {
               <p>Our Approach</p>
             </div>
             <div className="manifesto-title">
-              <h1>
-                Got a massive architectural dream? That&apos;s our specialty. We use 
-                state-of-the-art 3D design to create extraordinary buildings that 
-                become part of history - from World Cup stadiums to skyline-defining 
-                towers that make people go &quot;wow!&quot;
-              </h1>
+              <h2>
+                A render shouldnt just be an image. It should be a story, evoke emotion, and bring
+                the vision to reality.
+              </h2>
             </div>
           </div>
         </section>
@@ -343,7 +428,7 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    We use cutting-edge 3D design to create buildings that stand the test of time, 
+                    We use cutting-edge 3D design to create buildings that stand the test of time,
                     from iconic World Cup stadiums to breathtaking skyscrapers.
                   </p>
                 </div>
@@ -363,8 +448,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    We source and activate the perfect talent for authentic storytelling. 
-                    Who&apos;s the main character in your story?
+                    We source and activate the perfect talent for authentic storytelling. Who&apos;s
+                    the main character in your story?
                   </p>
                 </div>
               </div>
@@ -383,8 +468,8 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    We create original content and produce it from pre to post. 
-                    You dream it, we breathe it into reality.
+                    We create original content and produce it from pre to post. You dream it, we
+                    breathe it into reality.
                   </p>
                 </div>
               </div>
@@ -411,10 +496,10 @@ const Home = () => {
               </div>
               <div className="about-copy">
                 <p>
-                  At 4th Tale Inc, we believe in the power of authentic storytelling 
-                  and meaningful connections. Our approach combines deep cultural insights 
-                  with innovative design thinking to create impactful brand experiences 
-                  that resonate with audiences and drive real results.
+                  At 4th Tale Inc, we believe in the power of authentic storytelling and meaningful
+                  connections. Our approach combines deep cultural insights with innovative design
+                  thinking to create impactful brand experiences that resonate with audiences and
+                  drive real results.
                 </p>
               </div>
             </div>
@@ -426,66 +511,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="gallery">
-          <div className="gallery-wrapper">
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/img1.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img2.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img3.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img4.jpeg" alt="" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/img5.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img6.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img7.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img8.jpeg" alt="" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/img9.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img10.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img11.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img12.jpeg" alt="" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/img13.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img14.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img15.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img16.jpeg" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         <section className="team" id="team">
           <div className="container">
@@ -496,8 +522,8 @@ const Home = () => {
 
             <div className="team-intro">
               <h1>
-                Passionate creators, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; driven by
-                &nbsp;&nbsp;&nbsp; innovation
+                Passionate creators, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; driven by &nbsp;&nbsp;&nbsp;
+                innovation
               </h1>
             </div>
 
@@ -547,7 +573,8 @@ const Home = () => {
                   <div className="team-member-name">
                     <p>
                       Roomi <br />
-                      Kh                    </p>
+                      Kh{' '}
+                    </p>
                   </div>
                   <div className="team-member-details">
                     <div className="team-member-toggle">
@@ -555,7 +582,8 @@ const Home = () => {
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Roomi is a legend among legends, <br/>Acknowledge him. ☝️
+                        Roomi is a legend among legends, <br />
+                        Acknowledge him. ☝️
                       </p>
                     </div>
                   </div>
@@ -566,8 +594,8 @@ const Home = () => {
                 <h1>Roomi</h1>
               </div>
             </div>
-{/*
-            <div className="team-member tm-3">
+
+            {/* <div className="team-member tm-3">
               <div className="team-member-position">
                 <p>Project Manager</p>
               </div>
@@ -600,9 +628,7 @@ const Home = () => {
                 <p>(03)</p>
                 <h1>Michael Brown</h1>
               </div>
-            </div>
-*/}
-
+            </div> */}
           </div>
         </section>
 
@@ -652,7 +678,13 @@ const Home = () => {
                   <p>LinkedIn</p>
                   <p>Twitter</p>
                   <p>
-                    <a href="https://www.instagram.com/4thtale/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a
+                      href="https://www.instagram.com/4thtale/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Instagram
+                    </a>
                   </p>
                   <p>GitHub</p>
                 </div>
@@ -665,4 +697,5 @@ const Home = () => {
   );
 };
 
-export default Transition(Home);
+const HomeWithTransition = Transition(Home);
+export default HomeWithTransition;
