@@ -1,0 +1,138 @@
+# Project Intelligence: 4th Tale Inc Website
+
+## Core Architecture Patterns
+
+### Component Organization
+- Each component lives in its own folder: `ComponentName/ComponentName.jsx` + `ComponentName.css`
+- Page components in `src/pages/` with dedicated folders
+- Reusable components in `src/components/` 
+- Assets organized by category in `public/` (projects, team, work, etc.)
+
+### Animation Implementation
+- **GSAP is primary animation library** - use for complex scroll animations, hover effects, transforms
+- **Framer Motion for page transitions** - AnimatePresence wrapping Routes
+- **React Lenis for smooth scrolling** - wrap entire app in ReactLenis
+- **ScrollTrigger pattern**: Always cleanup with `trigger.kill()` in useEffect cleanup
+- **Mobile animation logic**: Check `isMobile` state and conditionally apply animations
+
+### State Management
+- **Local state with hooks** - no global state management needed
+- **Mobile detection pattern**: `useEffect` with resize listener, `window.innerWidth <= 900`
+- **Scroll position reset**: `window.scrollTo({ top: 0, behavior: 'instant' })` on page load
+
+### Performance Patterns
+- **Animation cleanup critical**: Always cleanup GSAP timelines and ScrollTriggers
+- **Conditional animations**: Different logic for mobile vs desktop
+- **Asset optimization**: Large number of images require loading strategies
+
+## Key Technical Decisions
+
+### GSAP Animation Patterns
+```javascript
+// Standard scroll trigger setup
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.element',
+    start: 'top 35%',
+    end: 'bottom 75%',
+    scrub: true,
+    markers: false // Always false in production
+  }
+});
+
+// Hover animation pattern
+element.addEventListener('mouseenter', () => {
+  gsap.to(target, { scale: 1.2, duration: 0.5, ease: 'power2.out' });
+});
+```
+
+### Text Animation Pattern
+- Use SplitType for character/word splitting
+- Apply opacity reveal animations with GSAP
+- Always revert SplitType in cleanup: `splitText.revert()`
+
+### Mobile-First Approach
+- Check mobile state before applying complex animations
+- Reduce animation complexity on mobile for performance
+- Use `window.innerWidth <= 900` as mobile breakpoint
+
+## Development Workflow
+
+### File Organization
+- **Never inline styles** - always use dedicated CSS files
+- **Import order**: React hooks, components, styles, external libraries, icons
+- **Component structure**: State, effects, event handlers, render
+- **CSS organization**: Component-specific styles in dedicated files
+
+### Animation Development
+- **Start with desktop**, then adapt for mobile
+- **Use GSAP DevTools** (dat.GUI) for development tweaking
+- **Test performance** on lower-end devices
+- **Cleanup animations** in component unmount
+
+### Asset Management
+- **Optimize images** before adding to public folder
+- **Use descriptive filenames** for assets
+- **Organize by content type** (projects, team, work, etc.)
+- **Consider lazy loading** for large image sets
+
+## Project-Specific Patterns
+
+### Home Page Structure
+1. Hero section with branding
+2. Project gallery with hover animations  
+3. Manifesto with scroll-triggered text reveal
+4. Team section with professional imagery
+5. Footer with contact information
+
+### Animation Hierarchy
+- **Page transitions**: Framer Motion (app-level)
+- **Scroll animations**: GSAP ScrollTrigger (page-level)
+- **Hover effects**: GSAP (component-level)
+- **Text animations**: SplitType + GSAP (element-level)
+
+### Performance Considerations
+- **60fps target** for all animations
+- **Smooth scrolling** with React Lenis
+- **Animation cleanup** prevents memory leaks
+- **Mobile optimization** reduces complexity
+
+## Code Quality Standards
+
+### React Patterns
+- **Functional components** with hooks
+- **Modern JavaScript** (ES6+, async/await)
+- **Component composition** over inheritance
+- **Props validation** with PropTypes or TypeScript
+
+### CSS Patterns
+- **Component-scoped styles** in dedicated CSS files
+- **Consistent naming** with BEM-like methodology
+- **Responsive design** with mobile-first approach
+- **Animation performance** with transform/opacity focus
+
+### Development Tools
+- **ESLint + Prettier** for code quality
+- **Vite** for fast development and builds
+- **React DevTools** for debugging
+- **GSAP DevTools** for animation debugging
+
+## Known Gotchas
+
+### Animation Issues
+- **Always cleanup GSAP**: Memory leaks without proper cleanup
+- **Mobile performance**: Complex animations can lag on mobile devices
+- **Scroll position**: Reset scroll on page navigation
+- **Timeline conflicts**: Multiple timelines targeting same element
+
+### React Patterns
+- **useEffect dependencies**: Include all dependencies to prevent stale closures
+- **Event listener cleanup**: Remove event listeners in useEffect cleanup
+- **State updates**: Batch state updates to prevent unnecessary re-renders
+
+### Asset Loading
+- **Large images**: Consider lazy loading for better performance
+- **Video files**: Optimize for web delivery
+- **Font loading**: Custom fonts should have fallbacks
+
+This project prioritizes **animation quality** and **performance** above all else. Every decision should consider the impact on user experience and page performance. 

@@ -1,6 +1,6 @@
 ---
-description: 
-globs: 
+description: these cursor rules are made for any task related to design systems
+alwaysApply: false
 ---
 # 4th Tale Design System
 Version 1.0.0
@@ -21,17 +21,17 @@ Version 1.0.0
 ### Colors
 @colors: {
   primary: {
-    dark: #1A1A1A,
-    light: #F5F5F5
+    dark: #000000,
+    light: #FFFFFF
   },
   accent: {
-    wood: #8C7355,
-    concrete: #B7B7A4,
-    sage: #6B705C
+    wood: #808080,
+    concrete: #A0A0A0,
+    sage: #606060
   },
   text: {
-    primary: #333333,
-    secondary: #666666
+    primary: #FFFFFF,
+    secondary: #CCCCCC
   }
 }
 
@@ -135,16 +135,16 @@ Version 1.0.0
 @button-styles: {
   primary: {
     background: transparent,
-    text-color: @colors.primary.dark,
+    text-color: @colors.primary.light,
     hover: {
-      background: @colors.primary.dark,
-      text-color: @colors.primary.light
+      background: @colors.primary.light,
+      text-color: @colors.primary.dark
     }
   },
   secondary: {
-    border: 1px solid @colors.primary.dark,
+    border: 1px solid @colors.primary.light,
     hover: {
-      background: @colors.primary.dark
+      background: @colors.primary.light
     }
   }
 }
