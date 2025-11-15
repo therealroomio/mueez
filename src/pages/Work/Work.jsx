@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./Work.css";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Cursor from "../../components/Cursor/Cursor";

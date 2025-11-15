@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Cursor.css";
 import gsap from "gsap";
 import { MdOutlineArrowOutward } from "react-icons/md";

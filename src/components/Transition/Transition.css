@@ -19,22 +19,19 @@
   transform-origin: top;
 }
 
-.transition-text {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 600;
+.transition-logo {
   display: flex;
   align-items: center;
-  gap: 0.5em;
-  letter-spacing: 1px;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
 }
 
-.transition-text span {
-  position: relative;
-  top: 1px;
-  font-size: 1rem;
-  letter-spacing: 0;
-  font-weight: lighter;
+.transition-logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .loader-bg {

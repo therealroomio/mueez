@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ReactLenis } from "@studio-freight/react-lenis";

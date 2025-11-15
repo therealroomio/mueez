@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Link } from "react-router";
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import gsap from "gsap";
 
