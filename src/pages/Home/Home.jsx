@@ -278,7 +278,8 @@ const Home = () => {
           </div>
           <div className="cta-header">
             <h2>
-              hello haha
+              We create high quality renders that bring architecture, products, and stories to life
+              with stunning detail and artistic vision.
             </h2>
           </div>
           <div className="cta-btn">
