@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import './Home.css';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 // import HeroGradient from '../../components/HeroGradient/HeroGradient';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
@@ -265,50 +265,11 @@ const Home = () => {
                 <img src="/marquee/marquee00012.png" alt="" />
               </div>
             </div>
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/marquee00013.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00014.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00015.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00016.png" alt="" />
-              </div>
-            </div>
+            
 
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/marquee00017.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00018.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00019.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00020.png" alt="" />
-              </div>
-            </div>
 
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/marquee00021.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00022.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00023.png" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/marquee00024.png" alt="" />
-              </div>
-            </div>
+
+            
           </div>
         </section>
         <section className="cta">
